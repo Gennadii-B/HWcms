@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HWcms:war exploded">
+    <output-path>$PROJECT_DIR$/target/HWcms</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HWcms" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.4.1212" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/HWcms/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="HWcms/web/Web" />
+    </root>
+  </artifact>
+</component>
