@@ -15,12 +15,6 @@ public class ContentControllerDAO extends ConnectDS {
     private PreparedStatement ps = null;
     private Statement st = null;
     private ResultSet rs = null;
-    private List<String> res;
-
-
-    private String selectContent = "SELECT * FROM news_content " +
-            "WHERE name_button = ";
-
 
 
     public void putContentToDB(EnContent ec, String menuButton){
@@ -96,21 +90,12 @@ public class ContentControllerDAO extends ConnectDS {
     }
 
     private boolean buttonController(EnContent ec, String menuButton){
-//        boolean flag = false;
         if(menuButton == null || menuButton.equals("пустой бланк")) {
-//            flag = true;
             ec.setButton("");
             ec.setTitle("");
             ec.setContent("");
             return true;
         }
-//        } else if(ec.getButton() != null && menuButton.equals("удалить")){
-////            flag = true;
-//            System.out.println("action method delete");
-//            System.out.println(ec.getButton());
-//            deleteContent(ec, menuButton);
-//            return true;
-//        }
         return false;
     }
 

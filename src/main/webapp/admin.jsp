@@ -7,7 +7,7 @@
 <html>
     <head>
         <title>ADMIN_PAGE</title>
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="templates/styles.css"/>
     </head>
     <body>
 
@@ -23,13 +23,12 @@
            cc.putContentToDB(ecOut, request.getParameter("menuButton"));
 
         EnContent ecIn = cc.loadContent(request.getParameter("menuButton"));
-
         %>
-        <form action="news.jsp">
+        <form action="news">
             <button type="submit">page</button>
         </form>
         <div id="container">
-            <jsp:include page="header.jsp"/>
+            <jsp:include page="templates/header.jsp"/>
             <div id="sidebar">
                 <a href="news.jsp"><h3>Menu</h3></a>
                 <form action="">
@@ -52,7 +51,7 @@
                 <input type="submit" name="menuButton" value="пустой бланк"/>
             </form>
         </div>
-        <jsp:include page="footer.jsp"/>
+        <jsp:include page="templates/footer.jsp"/>
         </div>
     </body>
 </html>

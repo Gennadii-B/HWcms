@@ -1,4 +1,4 @@
-package main.java;
+package main.java.Filters;
 
 import main.java.entity.Admin;
 import org.apache.commons.lang3.StringUtils;
@@ -17,7 +17,7 @@ import java.util.List;
 public class AuthFilter implements Filter {
 
     private List<String> pathFilters = Arrays.asList
-            (new String[]{"news"});
+            (new String[]{"news", "news.jsp", "styles.css", "admin_login.jsp", ""});
 
     public AuthFilter() {
     }
@@ -41,14 +41,14 @@ public class AuthFilter implements Filter {
         }
 
         HttpSession session =((HttpServletRequest)req).getSession();
-        Admin user = (Admin) session.getAttribute("LOGIN_USER");
+        Admin user = (Admin) session.getAttribute("LOGIN_ADMIN");
 
         if(user != null){
             filterChain.doFilter(req, resp);
             return;
         }
 
-        ((HttpServletResponse) resp).sendRedirect("news");
+        ((HttpServletResponse) resp).sendRedirect("admin_login.jsp");
     }
 
     public void destroy() {

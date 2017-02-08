@@ -7,6 +7,15 @@ h2 {
     color: #800040; /* Цвет текста */
     margin-top: 0; /* Отступ сверху */
 }
+
+#login {
+    padding: 0.5%;
+    border: 1px solid #0b1454;
+    width: 10%; /* Ширина слоя */
+    height: 15%;
+    margin: 20% auto; /* Выравнивание по центру */
+    background: #f0f0f0; /* Цвет фона левой колонки */
+}
 #container {
     width: 45%; /* Ширина слоя */
     height: 90%;
