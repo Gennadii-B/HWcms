@@ -3,8 +3,6 @@ package main.java.dao;
 import main.java.entity.EnContent;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by N on 06.02.2017.
